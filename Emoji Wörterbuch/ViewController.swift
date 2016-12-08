@@ -3,7 +3,7 @@
 //  Emoji Wörterbuch
 //
 //  Created by Oliver Roman on 8.12.16.
-//  Copyright © 2016 macologe.de. All rights reserved.
+//  Copyright © 2016 macologe.de. All rights reserved. 
 //
 
 import UIKit
