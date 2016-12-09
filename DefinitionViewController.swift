@@ -10,11 +10,42 @@ import UIKit
 
 class DefinitionViewController: UIViewController {
 
+    @IBOutlet weak var emojiLabel: UILabel!
+    
+    @IBOutlet weak var definitionLabel: UILabel!
+    
+    var emoji = "NO EMOJI"
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        emojiLabel.text = emoji
+        
+        if emoji == "😀" {
+            definitionLabel.text = "Ich bin der Standard-Smiley."
+        }
+        if emoji == "😂" {
+            definitionLabel.text = "Zum Tränen Lachen!!!"
+        }
+        if emoji == "😇" {
+            definitionLabel.text = "Ich bin Christ!"
+        }
+        if emoji == "😅" {
+            definitionLabel.text = "Kalter Schweiß!"
+        }
+        if emoji == "💩" {
+            definitionLabel.text = "Ein fröhlicher Haufen."
+        }
+        if emoji == "👻" {
+            definitionLabel.text = "Huibuuuh!"
+        }
+        if emoji == "😘" {
+            definitionLabel.text = "Bussi!"
+        }
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -22,14 +53,5 @@ class DefinitionViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
