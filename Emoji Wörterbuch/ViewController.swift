@@ -12,6 +12,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     @IBOutlet weak var MeinTableView: UITableView!
     
+    var emojis = ["😀","😂","😇","😅","😆","😉","😊","😡","😱","😷","💩","👻","😘"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,12 +22,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         MeinTableView.delegate = self
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { //beantwortet die Frage, wie viele Reihen dargestellt werden sollen
-        return 10
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { // beantwortet die Frage, wie viele Reihen dargestellt werden sollen
+        return emojis.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { //beantwortet die Frage, was in den Reihen dargestellt wird
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { // beantwortet die Frage, was in den Reihen dargestellt wird
         let cell = UITableViewCell()
+        cell.textLabel?.text = emojis[indexPath.row]
         return cell
     }
 
